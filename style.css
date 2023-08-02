@@ -96,7 +96,6 @@ a {
 .box-featured {
   display: flex;
   padding: 10px 0;
-  min-width: 720px;
 }
 .img-featured {
   display: flex;
@@ -162,13 +161,14 @@ footer {
 @media only screen and (max-width:1200px) {
   .introduce{
     width:95%;
+    min-width:720px
   }
   .inside-introduce {
     flex-flow:column;
     margin:auto;
     width:100%;
   }
-  .text>h1,p{
+  .text>h1 , .text>p{
     text-align: center;
   }
   .image{
@@ -187,14 +187,23 @@ footer {
   .container-post{
     flex-flow:column;
   }
-  .box-post{
+  .recent-posts{
     min-width: 720px;
   }
-  .container ~ p{
+  .container>p:first-of-type{
     text-align: center;
   }
   .container{
     width: 95%;
+    min-width: 720px;
+  }
+  .box-featured{
+    flex-flow:column;
+    align-items: center;
+  }
+  .img-featured>img {
+    width:420px;
+    min-width:420px;
   }
 }
 
